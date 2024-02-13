@@ -1,10 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const BookingDb = require('../database/models/bookingDb');
 
 const customerDbSchema = new Schema({
     uid: {
         type: String, 
+        required: true
+    },
+    email: {
+        type: String,
         required: true
     },
     profilePhoto: {
